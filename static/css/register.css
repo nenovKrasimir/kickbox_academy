@@ -1,77 +1,131 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.button {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    background: #1bb1dc;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+}
+.highlight {
+  color: #1bb1dc; /* replace with your desired color */
+}
+li {
+    list-style-type: none;
 }
 
-h2 {
+.img {
+    width: 15rem;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+img {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img::after {
+    display: block;
+    content: "";
+    padding-top: 100%;
+}
+
+.detailsMyBooks,
+.deleteBook,
+.myBooks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailsMyBooks>p:nth-child(2),
+.deleteBook>p:nth-child(2),
+.myBooks>p:nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.dashboard>nav>ul {
+    display: flex;
+
+}
+
+.dashboard>nav>ul li:not(:last-child) {
+    padding-right: 1rem;
+
+}
+
+
+.basic h1,
+.dashboard h1 {
+    text-align: center;
+    margin: 70px;
+    padding: 2rem 0 1rem 0;
+}
+
+h3 {
+    font-size: 1.9rem;
+    margin-bottom: 0;
+    text-align: auto;
+}
+
+.dashboard .my-books-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.detailsMyBooks textarea {
+    margin-bottom: 2rem;
+}
+
+|
+textarea#description {
+    height: 100px;
+    resize: none;
+}
+
+.myBooks {
+    border-radius: 10px;
+    text-align: center;
+    margin: 2rem;
+    position: relative;
+    width: 400px;
+    height: auto;
+    transition: all 0.3s cubic-bezier(.50, .80, .25, 1);
+    box-shadow: -8px -2px 28px -8px gray;
+    align-items: center;
+}
+
+.myBooks:hover {
+    box-shadow: 3px 3px 80px 1px #158caf;
+}
+
+#views {
+    display: none;
+}
+
+.details > .book-information > .img {
+    width: 60%;
+    align-items: center;
+}
+.details > .book-information > .button {
+    width: 30%;
     text-align: center;
 }
 
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.field {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #1bb1dc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-.register {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-.register form {
-    max-width: 400px;
-}
-
-.register .register-image {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 20px;
-}
-
-.register .register-image img {
-    max-width: 500px;
+.details {
+    margin:  30px;
 }

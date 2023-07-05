@@ -20,4 +20,6 @@ def register_page(request):
             form.save()
             return redirect('login-page')
 
-    return render(request=request, template_name='register.html', context=context)
+    return render(request=request, template_name='join_us.html', context=context)
+
+
