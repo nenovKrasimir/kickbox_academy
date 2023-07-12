@@ -1,1 +1,1 @@
-# kickbox_academy
+# kickbox_academy_website django
