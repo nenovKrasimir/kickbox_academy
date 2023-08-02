@@ -21,5 +21,3 @@ def register_page(request):
             return redirect('login-page')
 
     return render(request=request, template_name='join_us.html', context=context)
-
-
