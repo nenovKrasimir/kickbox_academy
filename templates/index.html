@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +39,8 @@
 
         <body>
 
-{% block content %}
+
+
         <!-- ======= Header ======= -->
         <header id="header" class="fixed-top d-flex align-items-center header-transparent">
             <div class="container d-flex align-items-center">
@@ -48,11 +48,11 @@
                 <h1 class="logo me-auto"><a href="{% url 'home_page' %}">KICKBOXING ACADEMY</a></h1>
                 <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                        <li><a class="nav-link scrollto" href="#hero">Home</a></li>
                         <li><a class="nav-link scrollto" href="#about">About</a></li>
                         <li><a class="nav-link scrollto" href="#services">Services</a></li>
                         <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                        <li><a href="{% url 'register' %}">Join us</a></li>
+                        <li><a class="nav-link scrollto" href="{% url 'register' %}">Join us</a></li>
                         <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 <li><a href="#">Drop Down 1</a></li>
@@ -84,7 +84,7 @@
 
             </div>
         </header><!-- End Header -->
-
+{% block content %}
         <!-- ======= Hero Section ======= -->
         <section id="hero" class="clearfix">
             <div class="container d-flex h-100">
@@ -100,7 +100,6 @@
                         <img src="{% static 'img/home (2).png' %}" alt="" class="img-fluid">
                     </div>
                 </div>
-
             </div>
         </section><!-- End Hero -->
         <main id="main">
