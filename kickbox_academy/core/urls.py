@@ -3,5 +3,5 @@ from kickbox_academy.core import views
 
 urlpatterns = [
     path('', views.home_page, name='home_page'),
-    path('register/', views.register_page, name='register')
+    path('join_academy/', views.join_us_page, name='join_us')
 ]

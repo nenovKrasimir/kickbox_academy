@@ -11,8 +11,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{% static 'img/favicon.png' %}" rel="icon">
-    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <link href="{% static 'img/kickboxer.png' %}" rel="icon">
+    <link href="{% static 'img/kickboxer.png' %}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700"
@@ -50,25 +50,12 @@
                     <ul>
                         <li><a class="nav-link scrollto" href="/#hero">Home</a></li>
                         <li><a class="nav-link scrollto" href="/#about">About</a></li>
-                        <li><a class="nav-link scrollto" href="/#services">Services</a></li>
                         <li><a class="nav-link scrollto" href="/#team">Team</a></li>
-                        <li><a class="nav-link scrollto" href="{% url 'register' %}">Join us</a></li>
-                        <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                        <li><a class="nav-link scrollto" href="{% url 'join_us' %}">Join Academy</a></li>
+                        <li class="dropdown"><a href="#"><span>LOGIN</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a href="#">Drop Down 1</a></li>
-                                <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                    <ul>
-                                        <li><a href="#">Deep Drop Down 1</a></li>
-                                        <li><a href="#">Deep Drop Down 2</a></li>
-                                        <li><a href="#">Deep Drop Down 3</a></li>
-                                        <li><a href="#">Deep Drop Down 4</a></li>
-                                        <li><a href="#">Deep Drop Down 5</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Drop Down 2</a></li>
-                                <li><a href="#">Drop Down 3</a></li>
-                                <li><a href="#">Drop Down 4</a></li>
+                                <li><a href="#">LOGIN</a></li>
+                                <li><a href="#">REGISTER</a></li>
                             </ul>
                         </li>
                         <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
@@ -160,111 +147,23 @@
 
             </section><!-- End About Section -->
 
-            <!-- ======= Services Section ======= -->
-            <section id="services" class="services section-bg">
-                <div class="container" data-aos="fade-up">
-
-                    <header class="section-header">
-                        <h3>Services</h3>
-                        <p>Choose your best training schedule that fits you.</p>
-                    </header>
-
-                    <div class="row g-5">
-
-                        <div class="col-md-6 col-lg-4 wow bounceInUp" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="box">
-                                <div class="icon" style="background: #fceef3;"><i class="bi bi-briefcase"
-                                                                                  style="color: #ff689b;"></i></div>
-                                <h4 class="title"><a href="">Personal Kickboxing Session</a></h4>
-                                <p class="description text-center"><i class="bi bi-check-circle"></i> One-on-One
-                                    Personalized Attention
-                                <p class="description text-center"><i class="bi bi-check-circle"></i> Enhanced Focus on
-                                    Technique and Form
-                                <p class="description text-center"><i class="bi bi-check-circle"></i> Tailored to Your
-                                    Specific Goals and Needs
-
-                            </div>
-
-
-                        </div>
-                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="box">
-                                <div class="icon" style="background: #fff0da;"><i class="bi bi-card-checklist"
-                                                                                  style="color: #e98e06;"></i></div>
-                                <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip
-                                    ex ea commodo consequat tarad limino ata</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="box">
-                                <div class="icon" style="background: #e6fdfc;"><i class="bi bi-bar-chart"
-                                                                                  style="color: #3fcdc7;"></i></div>
-                                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum
-                                    dolore eu fugiat nulla pariatur</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 wow" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="box">
-                                <div class="icon" style="background: #eafde7;"><i class="bi bi-binoculars"
-                                                                                  style="color:#41cf2e;"></i></div>
-                                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                    officia
-                                    deserunt mollit anim id est laborum</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200"
-                        ">
-                        <div class=" box">
-                            <div class="icon" style="background: #e1eeff;"><i class="bi bi-brightness-high"
-                                                                              style="color: #2282ff;"></i></div>
-                            <h4 class="title"><a href="">Nemo Enim</a></h4>
-                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                blanditiis
-                                praesentium voluptatum deleniti atque</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="box">
-                            <div class="icon" style="background: #ecebff;"><i class="bi bi-calendar4-week"
-                                                                              style="color: #8660fe;"></i></div>
-                            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                tempore,
-                                cum soluta nobis est eligendi</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                </div>
-            </section><!-- End Services Section -->
-
-            <!-- ======= Why Us Section ======= -->
             <!-- ======= Team Section ======= -->
             <section id="team" class="team section-bg">
                 <div class="container" data-aos="fade-up">
                     <div class="section-header">
                         <h3>Team</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                        <p>Our best experts who will help you in your kickboxing journey</p>
                     </div>
 
                     <div class="row">
 
                         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                             <div class="member">
-                                <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
+                                <img src="{% static 'img/registration.png' %}" class="img-fluid" alt="">
                                 <div class="member-info">
                                     <div class="member-info-content">
                                         <h4>Walter White</h4>
-                                        <span>Chief Executive Officer</span>
+                                        <span>Three times world kickboxing champion</span>
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -278,11 +177,11 @@
 
                         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                             <div class="member">
-                                <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
+                                <img src={% static 'img/registration.png' %} class="img-fluid" alt="">
                                 <div class="member-info">
                                     <div class="member-info-content">
                                         <h4>Sarah Jhonson</h4>
-                                        <span>Product Manager</span>
+                                        <span>European and world champion, many years experience in training</span>
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -296,11 +195,11 @@
 
                         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                             <div class="member">
-                                <img src="{% static '/img/team-3.jpg' %}" class="img-fluid" alt="">
+                                <img src="{% static '/img/registration.png' %}" class="img-fluid" alt="">
                                 <div class="member-info">
                                     <div class="member-info-content">
                                         <h4>William Anderson</h4>
-                                        <span>CTO</span>
+                                        <span>Teaching over hundred of people every month, made over 10 world champions</span>
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -314,11 +213,11 @@
 
                         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                             <div class="member">
-                                <img src="{% static '/img/team-4.jpg' %}" class="img-fluid" alt="">
+                                <img src="{% static '/img/registration.png' %}" class="img-fluid" alt="">
                                 <div class="member-info">
                                     <div class="member-info-content">
                                         <h4>Amanda Jepson</h4>
-                                        <span>Accountant</span>
+                                        <span>Over twenty years experience in boxing and kickboxing coaching</span>
                                         <div class="social">
                                             <a href=""><i class="bi bi-twitter"></i></a>
                                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -329,7 +228,8 @@
                                 </div>
                             </div>
                         </div>
-
+                    <ul></ul>
+                    <ul></ul>
                     </div>
 
                 </div>

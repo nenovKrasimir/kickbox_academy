@@ -10,7 +10,7 @@ def home_page(request):
     return render(request, template_name='index.html')
 
 
-def register_page(request):
+def join_us_page(request):
     form = CreateUserForm
     context = {'form': form}
 
@@ -21,3 +21,7 @@ def register_page(request):
             return redirect('login-page')
 
     return render(request=request, template_name='join_us.html', context=context)
+
+
+def login_page(request):
+    pass
