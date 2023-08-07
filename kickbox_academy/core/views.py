@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from kickbox_academy.core.forms import UserProfileForm
+from kickbox_academy.core.forms import UserProfileForm, UserLoginForm
 
 
 # Create your views here.
@@ -15,5 +15,5 @@ def join_us_page(request):
 
 
 def login_page(request):
-    context = {'form': UserProfileForm}
+    context = {'form': UserLoginForm}
     return render(request=request, template_name='login.html', context=context)

@@ -1,4 +1,32 @@
 {% extends 'index.html' %}
+{% load static %}
 {% block content %}
-    {{ form }}
+
+    <link href="{% static '/css/login.css' %}" rel="stylesheet">
+
+    <div class="center-container">
+       <img src="{% static '/img/registration.png' %}"> <form method="post">
+            {{ form }}
+        <div>
+        <button type="submit">Login</button>
+            </div>
+        </form>
+        <img src="{% static '/img/registration.png' %}">
+
+    </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mainLoginLink = document.getElementById('login-highlight')
+    const loginLink = document.querySelector('.login-link[href="{% url 'login' %}"]');
+    if (loginLink && mainLoginLink) {
+        loginLink.classList.add('active');
+        mainLoginLink.classList.add('active');
+    }
+
+});
+</script>
+
+
 {% endblock %}
