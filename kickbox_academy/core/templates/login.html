@@ -6,6 +6,7 @@
 
     <div class="center-container">
        <img src="{% static '/img/registration.png' %}"> <form method="post">
+            {% csrf_token %}
             {{ form }}
         <div>
         <button type="submit">Login</button>

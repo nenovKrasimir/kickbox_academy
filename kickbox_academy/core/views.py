@@ -1,4 +1,6 @@
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 
 from kickbox_academy.core.forms import UserProfileForm, UserLoginForm
 
@@ -14,6 +16,19 @@ def join_us_page(request):
     return render(request=request, template_name='join_us.html')
 
 
-def login_page(request):
-    context = {'form': UserLoginForm}
-    return render(request=request, template_name='login.html', context=context)
+class CustomLoginView(LoginView):
+    template_name = 'login.html'
+    success_url = reverse_lazy('home')
+
+
+def registration_page(request):
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            return redirect('home_page')
+
+    else:
+        form = UserProfileForm()
+
+    return render(request, 'register.html', {'form': form})
