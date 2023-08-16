@@ -5,11 +5,29 @@
     <link href="{% static '/css/register.css' %}" rel="stylesheet">
 
     <div class="center-container">
-       <img src="{% static '/img/registration.png' %}"> <form method="post">
+        <img src="{% static '/img/registration.png' %}">
+        <form method="post">
             {% csrf_token %}
-            {{ form }}
-        <div>
-        <button type="submit">Register</button>
+            {{ form.username.label_tag }}
+            {{ form.username }}
+
+            {{ form.email.label_tag }}
+            {{ form.email }}
+
+            {{ form.first_name.label_tag }}
+            {{ form.first_name }}
+
+            {{ form.last_name.label_tag }}
+            {{ form.last_name }}
+
+            {{ form.password1.label_tag }}
+            {{ form.password1 }}
+
+            {{ form.password2.label_tag }}
+            {{ form.password2 }}
+
+            <div>
+                <button type="submit">Register</button>
             </div>
         </form>
         <img src="{% static '/img/registration.png' %}">
@@ -17,17 +35,17 @@
     </div>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const mainLoginLink = document.getElementById('login-highlight')
-    const registerLink = document.querySelector('.register-link[href="{% url 'register' %}"]');
-    if (registerLink && mainLoginLink) {
-        registerLink.classList.add('active');
-        mainLoginLink.classList.add('active');
-    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mainLoginLink = document.getElementById('login-highlight')
+            const registerLink = document.querySelector('.register-link[href="{% url 'register' %}"]');
+            if (registerLink && mainLoginLink) {
+                registerLink.classList.add('active');
+                mainLoginLink.classList.add('active');
+            }
 
-});
-</script>
+        });
+    </script>
 
 
 {% endblock %}
