@@ -19,7 +19,7 @@ def join_us_page(request):
 
 class CustomLoginView(LoginView):
     template_name = 'login.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('join_us')
 
 
 def registration_page(request):
