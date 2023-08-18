@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-@si@=^&&(h46ds4kwn8-4z-mzn1i&@#ju#k3vlplbf1l1lyn6c
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_REDIRECT_URL = 'join_us'
 # Application definition
 
 INSTALLED_APPS = [
@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kickbox_academy.core',
+    'kickbox_academy.profile_management',
 ]
 
 MIDDLEWARE = [
@@ -63,9 +64,9 @@ WSGI_APPLICATION = 'kickbox_academy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'kickbox_academy_db',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'krask0swes1',
         'HOST': '127.0.0.1',
         'PORT': '5432'
     }
@@ -75,8 +76,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-AUTH_USER_MODEL = 'core.CustomUser'
-
+AUTH_USER_MODEL = 'core.User'
 
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.Argon2PasswordHasher',

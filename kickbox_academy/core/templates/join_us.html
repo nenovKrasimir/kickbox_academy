@@ -1,52 +1,51 @@
-{% extends 'index.html' %}{% load static %}
+{% extends 'index.html' %}
+{% load static %}
 {% block content %}
 
-    <link href="{% static '/css/join_us.css' %}" rel="stylesheet">
-    <section id="dashboard-page" class="dashboard fadeIn">
+    <link href="{% static '/css/register.css' %}" rel="stylesheet">
 
-        <h1>JOIN <span class="highlight">BUAKAW</span> ACADEMY</h1>
-        <ul class="my-books-list">
-            <li class="myBooks">
-                <p class="img"><img src="{% static 'img/1month.png' %}" alt=""></p>
-                <h3>ONE MONTH SUBSCRIPTION</h3>
-                <p></p>
-                <h3>75$</h3>
-                <p></p>
-                <a class="button" href="#">Buy</a>
-            </li>
-            <li class="myBooks">
-                <p class="img"><img src="{% static 'img/3months.png' %}" alt=""></p>
-                <h3>THREE MONTHS SUBSCRIPTION</h3>
-                <p></p>
-                <h3>169$</h3>
-                <p></p>
-                <a class="button" href="#">Buy</a>
-            </li>
-            <li class="myBooks">
-                <p class="img"><img src="{% static 'img/1year.png' %}" alt=""></p>
-                <h3>ONE YEAR SUBSCRIPTION</h3>
-                <p></p>
-                <h3>562$</h3>
-                <p></p>
-                <a class="button" href="#">Buy</a>
-            </li>
-        </ul>
-    </section>
+    <div class="center-container">
+        <img src="{% static '/img/registration.png' %}">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.username.label_tag }}
+            {{ form.username }}
 
-    <!-- In register.html -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const joinUsLink = document.querySelector('.nav-link[href="{% url 'join_us' %}"]');
-    if (joinUsLink) {
-        joinUsLink.classList.add('active');
-    }
+            {{ form.email.label_tag }}
+            {{ form.email }}
 
-});
-</script>
+            {{ form.first_name.label_tag }}
+            {{ form.first_name }}
+
+            {{ form.last_name.label_tag }}
+            {{ form.last_name }}
+
+            {{ form.password1.label_tag }}
+            {{ form.password1 }}
+
+            {{ form.password2.label_tag }}
+            {{ form.password2 }}
+
+            <div>
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <img src="{% static '/img/registration.png' %}">
+
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mainLoginLink = document.getElementById('login-highlight')
+            const registerLink = document.querySelector('.register-link[href="{% url 'register' %}"]');
+            if (registerLink && mainLoginLink) {
+                registerLink.classList.add('active');
+                mainLoginLink.classList.add('active');
+            }
+
+        });
+    </script>
+
 
 {% endblock %}
-
-
-
-
-
